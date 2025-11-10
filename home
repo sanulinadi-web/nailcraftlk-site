@@ -1,0 +1,170 @@
+```jsx name=Home.jsx
+import React from "react";
+
+export default function Home() {
+  return (
+    <main className="min-h-screen font-sans text-gray-900">
+      {/* HERO */}
+      <header
+        className="relative bg-cover bg-center"
+        style={{ backgroundImage: "url('/assets/hero.jpg')" }}
+        aria-label="Nail Craft LK hero"
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/20 to-black/40"></div>
+        <div className="relative max-w-6xl mx-auto px-6 py-28 md:py-36">
+          <div className="max-w-3xl text-white">
+            <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl leading-tight drop-shadow-sm">
+              Nail Craft LK
+            </h1>
+            <p className="mt-4 text-sm md:text-base text-white/90">
+              Colombo, Sri Lanka — Open Tue–Sat · 10:00 AM – 7:00 PM
+            </p>
+
+            <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-3">
+              <a
+                href="#contact"
+                className="inline-block bg-pink-600 hover:bg-pink-700 text-white px-5 py-3 rounded-md shadow-md text-sm font-medium transition"
+              >
+                Book Our Services
+              </a>
+
+              <a
+                href="tel:+9477XXXXXXX"
+                className="inline-block text-white/95 bg-white/10 hover:bg-white/20 px-4 py-3 rounded-md text-sm transition"
+                aria-label="Call Nail Craft LK"
+              >
+                Call / WhatsApp
+              </a>
+            </div>
+
+            <p className="mt-6 text-xs text-white/80">
+              Premium manicures, pedicures & bespoke nail art — hygienic studio,
+              professional products.
+            </p>
+          </div>
+        </div>
+      </header>
+
+      {/* TWO FEATURE IMAGES */}
+      <section className="max-w-6xl mx-auto px-6 py-12">
+        <div className="grid gap-6 md:grid-cols-2">
+          {/* Left */}
+          <figure className="group relative overflow-hidden rounded-xl shadow-lg">
+            <img
+              src="/assets/coffee.jpg"
+              alt="Coffee Craft"
+              className="w-full h-64 md:h-80 object-cover transform transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/35 to-black/10 transition-opacity duration-300"></div>
+            <figcaption className="absolute left-6 bottom-6 text-white">
+              <span className="inline-block bg-white/10 px-3 py-1 rounded-md text-xs tracking-wide">
+                Coffee Craft
+              </span>
+            </figcaption>
+          </figure>
+
+          {/* Right */}
+          <figure className="group relative overflow-hidden rounded-xl shadow-lg">
+            <img
+              src="/assets/facial.jpg"
+              alt="Facial Bar"
+              className="w-full h-64 md:h-80 object-cover transform transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-60 transition-opacity duration-300"></div>
+            <figcaption className="absolute left-6 bottom-6 text-white">
+              <span className="inline-block bg-white/10 px-3 py-1 rounded-md text-xs tracking-wide">
+                Facial Bar
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      {/* STAFF PHOTO */}
+      <section className="max-w-6xl mx-auto px-6 pb-12">
+        <div className="rounded-xl overflow-hidden shadow-lg">
+          <img
+            src="/assets/staff.jpg"
+            alt="Nail Craft LK staff"
+            className="w-full h-72 md:h-96 object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        <div className="mt-6 text-center">
+          <h2 className="text-xl font-semibold">Internationally Trained</h2>
+          <p className="mt-3 text-sm text-gray-600 max-w-3xl mx-auto">
+            All staff are internationally trained. (Exact wording to be added
+            later.)
+          </p>
+        </div>
+      </section>
+
+      {/* SIMPLE CONTACT ANCHOR (target for Book button) */}
+      <section
+        id="contact"
+        className="bg-gray-50 border-t border-gray-100 py-10"
+        aria-label="Contact and booking"
+      >
+        <div className="max-w-3xl mx-auto px-6">
+          <div className="bg-white p-6 rounded-lg shadow-sm">
+            <h3 className="text-lg font-medium mb-3">Book / Contact</h3>
+
+            <p className="text-sm text-gray-600 mb-4">
+              Prefer WhatsApp? Call:{" "}
+              <a
+                href="tel:+9477XXXXXXX"
+                className="text-pink-600 hover:underline"
+              >
+                +94 77 XXX XXXX
+              </a>
+            </p>
+
+            <form
+              action="#"
+              className="grid grid-cols-1 gap-3 sm:grid-cols-2"
+              aria-label="Booking form"
+            >
+              <input
+                type="text"
+                name="name"
+                placeholder="Your name"
+                className="px-3 py-2 border rounded-md text-sm"
+                required
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone / WhatsApp"
+                className="px-3 py-2 border rounded-md text-sm"
+                required
+              />
+              <input
+                type="text"
+                name="service"
+                placeholder="Service (e.g. Gel overlay)"
+                className="px-3 py-2 border rounded-md text-sm sm:col-span-2"
+                required
+              />
+              <textarea
+                name="notes"
+                placeholder="Preferred date/time or notes"
+                className="px-3 py-2 border rounded-md text-sm sm:col-span-2"
+                rows={4}
+              />
+              <button
+                type="submit"
+                className="sm:col-span-2 inline-block bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-md text-sm transition"
+              >
+                Send Booking Request
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
+```
